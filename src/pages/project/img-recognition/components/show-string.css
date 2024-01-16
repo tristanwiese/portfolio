@@ -1,0 +1,31 @@
+.string-main {
+  font-size: 20px;
+  font-family: "Consolas";
+  color: white;
+}
+.text-container {
+  width: 500px;
+  overflow-wrap: break-word;
+  margin-inline: 10px;
+}
+.found-string {
+  font-size: 20px;
+  font-family: "Consolas";
+  color: white;
+}
+.show-text-row {
+  display: flex;
+  justify-content: center;
+}
+.description {
+  font-family: "Consolas";
+  width: 70%;
+  color: white;
+  display: flex;
+  margin-bottom: 20px;
+}
+.show-text-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

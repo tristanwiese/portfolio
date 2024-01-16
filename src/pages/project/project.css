@@ -1,0 +1,7 @@
+.project-main {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  padding-block: 50px;
+}

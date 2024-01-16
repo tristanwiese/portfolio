@@ -1,0 +1,39 @@
+.bio-code-logo{
+    max-height: 100px;
+    position: absolute;
+}
+.logo-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.logo-text{
+    opacity: 0;
+    font-family: 'Consolas';
+    font-size: 40px;
+    text-align: center;
+}
+@media(max-width: 1700px) {
+    .logo-text{
+        font-size: 30px;
+    }
+}
+@media(max-width: 1350px) {
+    .logo-text{
+        font-size: 25px;
+    }
+}
+
+
+.logo-text, .bio-code-logo{
+    transition: all 0.3s ease;
+}
+.logo-image-container:hover .bio-code-logo{
+    opacity: 0;
+}
+.logo-image-container:hover .logo-text{
+    opacity: 1;
+}

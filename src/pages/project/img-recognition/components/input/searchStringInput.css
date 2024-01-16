@@ -1,0 +1,13 @@
+label {
+  font-family: "Consolas";
+  color: white;
+  margin-right: 10px;
+}
+input {
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-family: "Consolas";
+  margin-block: 20px;
+}

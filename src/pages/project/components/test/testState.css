@@ -1,0 +1,7 @@
+.counter {
+  border: solid paleturquoise 4px;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Consolas";
+  font-size: 40px;
+}

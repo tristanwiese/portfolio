@@ -1,0 +1,97 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.button-row {
+  width: 200px;
+  justify-content: space-evenly;
+}
+.title {
+  font-family: "Consolas";
+  font-size: 40px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.home-title {
+  font-family: "Consolas";
+  font-weight: bold;
+  color: white;
+  font-size: 80px;
+}
+.home-image-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+.box {
+  max-width: 400px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border: solid paleturquoise 4px;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.row-a {
+  width: 100%;
+  justify-content: space-evenly;
+}
+.box-a {
+  padding: 50px;
+  justify-content: space-between;
+}
+.box-b {
+  padding: 50px;
+}
+.main-state {
+  font-size: 30px;
+  margin-block: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Consolas";
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 20px;
+  max-height: 20px;
+  background-color: rgb(53, 207, 245);
+  box-shadow: -1px 5px 3px rgb(3, 3, 49);
+}
+.home-box-description {
+  font-family: "Consolas";
+  color: white;
+}
+.home-page-button {
+  font-size: 25px;
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Consolas";
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+.home-page-button:hover {
+  transform: translateY(-5px);
+  box-shadow: -2px 10px 7px rgb(38, 94, 151);
+}
+.row-b {
+  justify-content: center;
+}
+.tic-tac-toe-container {
+  border: solid paleturquoise 4px;
+  border-radius: 10px;
+}

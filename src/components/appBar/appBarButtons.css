@@ -1,0 +1,107 @@
+.app-bar-button{
+    --edge-size: 20px;
+    --border-size: 4px;
+    --background: rgb(0, 4, 41);
+    --border-color: paleturquoise;
+
+    isolation: isolate;
+
+    font-family: 'Consolas';
+    font-size: 15px;
+    cursor: pointer;
+    border: 0;
+    opacity: 1;
+    height: 60px;
+    width: 140px;
+    color: white;
+    position: relative;
+    clip-path: polygon(
+        0% var(--edge-size),
+        var(--edge-size) 0,
+        100% 0,
+        100% calc(100% - var(--edge-size)),
+        calc(100% - var(--edge-size)) 100%,
+        0 100%
+    );
+}
+
+.app-bar-button::before,
+.app-bar-button::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.app-bar-button::before{
+    background: var(--border-color);
+    z-index: -2;
+}
+.app-bar-button::after{
+    background: var(--background);
+    z-index: -1;
+    
+    clip-path: polygon(
+        var(--border-size) 
+        calc(var(--edge-size) + var(--border-size) * .25),
+
+        calc(var(--edge-size) + var(--border-size) * .25)
+        var(--border-size),
+
+        calc(100% - var(--border-size)) 
+        var(--border-size),
+
+        calc(100% - var(--border-size)) 
+        calc(100% - calc(var(--edge-size) + var(--border-size) * .25)),
+
+        calc(100% - calc(var(--edge-size) + var(--border-size) * .25)) 
+        calc(100% - var(--border-size)),
+
+        var(--border-size)
+        calc(100% - var(--border-size))
+    );
+    
+}
+.app-bar-button-container{
+    position: absolute;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.app-bar-button-container:hover{
+    transform: translate(-2px, -8px);
+}
+.button-shadow{
+    --edge-size: 20px;
+
+    height: 60px;
+    width: 140px;
+    background: rgba(131, 243, 243, 0.658);
+    position: absolute;
+    box-shadow: 0px 10px 10px rgba(131, 243, 243, 0.658);
+    z-index: 0;
+    clip-path: polygon(
+        0% var(--edge-size),
+        var(--edge-size) 0,
+        100% 0,
+        100% calc(100% - var(--edge-size)),
+        calc(100% - var(--edge-size)) 100%,
+        0 100%
+    );
+}
+.app-bar-buttons-relative{
+    position: relative;
+    display: flex;
+    width: 140px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.active-page-app-bar-marker{
+    max-height: 30px;
+    margin-left: 10px;
+    left: 80px;
+}
+.app-bar-button-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

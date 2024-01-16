@@ -1,0 +1,36 @@
+.image {
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  max-height: 200px;
+  animation: rotate 10s infinite linear;
+}
+.quickRotate {
+  /* transition: all 0.4s ease-in-out; */
+  animation: quickRotate 4s infinite ease;
+}
+.image:hover {
+  transform: scale(1.3);
+}
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes quickRotate {
+  0% {
+    rotate: 0deg;
+  }
+  /* 50% {
+    rotate: 720deg;
+  }
+  75% {
+    rotate: 810deg;
+  } */
+  100% {
+    rotate: 900deg;
+  }
+}

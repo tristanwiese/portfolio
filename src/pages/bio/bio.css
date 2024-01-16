@@ -1,0 +1,21 @@
+.cv{
+    max-height: 1000px;
+}
+.cv-container{
+    margin-block: 30px;
+    flex: 10;
+    display: flex;
+    justify-content: center;
+}
+.bio-main{
+    display: flex;
+    flex-direction: row;
+}
+.bio-left-wing, .bio-right-wing{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: linear-gradient(rgb(2, 13, 61), paleturquoise);
+}

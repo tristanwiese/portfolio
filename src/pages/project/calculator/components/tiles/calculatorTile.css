@@ -1,0 +1,12 @@
+.calc-tile-main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(165, 165, 165);
+  border: solid 1px transparent;
+}
+
+.calc-tile-main:hover {
+  border: 1px solid black;
+}

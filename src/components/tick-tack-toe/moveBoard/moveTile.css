@@ -1,0 +1,11 @@
+.move-tile-main{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: paleturquoise;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    font-family: 'Consolas';
+    justify-content: space-between;
+}

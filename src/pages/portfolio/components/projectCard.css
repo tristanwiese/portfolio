@@ -1,0 +1,114 @@
+:root {
+  --height: 300px;
+  --width: 500px;
+}
+
+.project-card {
+  --edge-size: 40px;
+  --border-size: 4px;
+  --background: rgb(19, 28, 107);
+  --border-color: paleturquoise;
+
+  isolation: isolate;
+
+  border: 0;
+  position: relative;
+  clip-path: polygon(
+    0% var(--edge-size),
+    var(--edge-size) 0,
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    calc(100% - var(--edge-size)) 100%,
+    0 100%
+  );
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+.project-card::before,
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.project-card::before {
+  background: var(--border-color);
+  z-index: -2;
+}
+.project-card::after {
+  background: var(--background);
+  z-index: -1;
+
+  clip-path: polygon(
+    var(--border-size) calc(var(--edge-size) + var(--border-size) * 0.25),
+    calc(var(--edge-size) + var(--border-size) * 0.25) var(--border-size),
+    calc(100% - var(--border-size)) var(--border-size),
+    calc(100% - var(--border-size))
+      calc(100% - calc(var(--edge-size) + var(--border-size) * 0.25)),
+    calc(100% - calc(var(--edge-size) + var(--border-size) * 0.25))
+      calc(100% - var(--border-size)),
+    var(--border-size) calc(100% - var(--border-size))
+  );
+}
+.project-card-shadow {
+  --edge-size: 40px;
+
+  height: calc(var(--height) + 40px);
+  width: calc(var(--width) + 40px);
+  background: rgba(131, 243, 243, 0.658);
+  position: absolute;
+  box-shadow: 0px 10px 10px rgba(131, 243, 243, 0.658);
+  z-index: -1;
+  clip-path: polygon(
+    0% var(--edge-size),
+    var(--edge-size) 0,
+    100% 0,
+    100% calc(100% - var(--edge-size)),
+    calc(100% - var(--edge-size)) 100%,
+    0 100%
+  );
+}
+.project-card:hover {
+  transform: translate(-4px, -10px);
+}
+
+.relative {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-description {
+  font-family: "Consolas";
+  margin-block: 20px;
+  color: white;
+}
+@media (max-width: 1200px) {
+  :root {
+    --width: 400px;
+    --height: 350px;
+  }
+}
+@media (max-width: 900px) {
+  :root {
+    --width: 500px;
+    --height: 300px;
+  }
+}
+@media (max-width: 560px) {
+  :root {
+    --width: 400px;
+    --height: 350px;
+  }
+}
+.deploy-url {
+  color: white;
+}

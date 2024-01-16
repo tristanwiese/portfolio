@@ -1,0 +1,12 @@
+.calc-main {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-width: 250px;
+  min-height: 450px;
+  max-width: 550px;
+  max-height: 750px;
+  resize: both;
+  overflow: auto;
+}
