@@ -37,7 +37,11 @@ export const counterSlice = createSlice({
                     state.value = "";
                     state.lastAction = action.payload;
                     break;
-            
+                case '/':
+                    state.total! /= parseFloat(state.value);
+                    state.value = "";
+                    state.lastAction = action.payload;
+                    break;
                 default:
                     state.total! = parseFloat(state.value);
                     state.value = "";
@@ -60,6 +64,10 @@ export const counterSlice = createSlice({
 
                 case 'x':
                     state.value = String((state.total!) * parseFloat(state.value));
+                    break;
+
+                case '/':
+                    state.value = String((state.total!) / parseFloat(state.value));
                     break;
             
                 default:

@@ -4,6 +4,8 @@ import './calcNumpad.css'
 import CalculatorTile from '../tiles/calculatorTile'
 
 var Tiles: string[] = [
+    "C",
+    "<-",
     "1",
     "2",
     "3",
@@ -18,7 +20,7 @@ var Tiles: string[] = [
     "x",
     "0",
     "=",
-    "C"
+    '/',
 ]
 
 interface CalculatorNumpadType {
@@ -31,7 +33,7 @@ const CalculatorNumpad: React.FC<CalculatorNumpadType> = ({ onClickTile }) => {
         <div className='calc-numpad-main'>
             {
                 Tiles.map((key, index) => {
-                    return <CalculatorTile text={key} key={key} onClickTile={onClickTile} />
+                    return <CalculatorTile text={key} key={key} index={index} onClickTile={onClickTile} />
                 })
             }
         </div>

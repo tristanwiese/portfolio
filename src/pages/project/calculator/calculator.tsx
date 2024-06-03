@@ -21,6 +21,9 @@ const Calculator = () => {
                 case '=':
                     dispatch(display());
                     break
+                case '<-':
+                    console.log('back');
+                    break
                 default:
                     dispatch(action(text));
                     break;

@@ -3,13 +3,14 @@ import './calculatorTile.css'
 
 interface CalculatorTileType {
     text: String,
-    onClickTile: Function
+    onClickTile: Function,
+    index: number
 }
 
-const CalculatorTile: React.FC<CalculatorTileType> = ({ text, onClickTile }) => {
+const CalculatorTile: React.FC<CalculatorTileType> = ({ text, onClickTile, index }) => {
 
     return (
-        <div className='calc-tile-main' onClick={() => onClickTile(text)}>
+        <div className={`calc-tile-main index-${index}`} onClick={() => onClickTile(text)}>
             <div className='calc-tile-text'>
                 {text}
             </div>
