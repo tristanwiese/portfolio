@@ -1,13 +1,13 @@
 import React from 'react'
 import './calcScreen.css'
 import { useSelector } from 'react-redux'
-import { state } from '../../../../../slices/counterSlice'
+import { CounterState, state } from '../../../../../slices/counterSlice'
 
 
 
 const CalculatorScreen = () => {
 
-    const counter: any = useSelector(state);
+    const counter: CounterState = useSelector(state);
 
     return (
         <div className='calc-screen-main'>
@@ -16,7 +16,7 @@ const CalculatorScreen = () => {
                     {counter.value === "" ? "0" : counter.value}
                 </div>
                 <div className='calc-screen-total'>
-                    {counter.total ?? ''}
+                    {counter.total ?? ''}{counter.lastAction}
                 </div>
             </div>
         </div>

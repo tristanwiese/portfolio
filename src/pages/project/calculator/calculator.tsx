@@ -4,7 +4,7 @@ import CalculatorScreen from './components/screen/calcScreen'
 import CalculatorNumpad from './components/calcNumpad/calcNumpad'
 
 import { useDispatch } from 'react-redux'
-import { count, reset, display, action } from '../../../slices/counterSlice'
+import { count, reset, display, action, backspace } from '../../../slices/counterSlice'
 
 const Calculator = () => {
 
@@ -22,7 +22,7 @@ const Calculator = () => {
                     dispatch(display());
                     break
                 case '<-':
-                    console.log('back');
+                    dispatch(backspace())
                     break
                 default:
                     dispatch(action(text));
