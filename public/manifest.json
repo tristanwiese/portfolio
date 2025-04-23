@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tristan Wiese",
+  "name": "Tristan Wiese's Portfolio",
+  "description": "Welcome to my portfolio! I'm a passionate web developer with a knack for creating beautiful and functional websites. Explore my work and get in touch!",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,9 +14,14 @@
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
